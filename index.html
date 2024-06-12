@@ -19,7 +19,9 @@
     <link rel="apple-touch-icon" href="./images/favicons/apple-touch-icon.png" />
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header border">
+      <h1 class="header__title">&lt/HTML&gt</h1>
+      <p class="header__text">закрывающий тег</p>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -46,13 +48,28 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <div class="test">Проверка текста</div>
+    <main class="content">
+      <ul class="content__items">
+        
+        <li>
+          <article class="content__item border">
+            <h2 class="Content__item-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+            <img src="./images/fritrack-desktop-img.png" alt="Картинка с домом на колесах" class="content__item-img"/>
+            <p class="content__item-text">
+              Это было самое начало пути. На этом этапе важно было проникнуться 
+              основами и настроиться на учёбу. И, возможно, подумать, как новые 
+              знания могут повлиять на ваше будущее.
+            </p>
+            <p class="content__item-text">
+              Это было самое начало пути. На этом этапе важно было проникнуться 
+              основами и настроиться на учёбу. И, возможно, подумать, как новые 
+              знания могут повлиять на ваше будущее.
+            </p>
+          </article>
+        </li>
+      </ul>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
     
-<!-- <svg viewBox="0 0 39px 39px">
-  <use href="./svg/floppy.svg#floppy">
-</svg> -->

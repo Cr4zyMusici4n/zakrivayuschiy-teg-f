@@ -13,17 +13,35 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+.border {
+  border: 2px solid var(--accent-color);
+}
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--main-font-wght);
-  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding: 100px 0;
   color: var(--accent-color);
+  font-family: var(--main-font), sans-serif;
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--main-font-wght); 
+}
+
+.header {
+  background-color: var(--background-color);
+  min-inline-size: var(--inline-size-content);
+  max-inline-size: var(--inline-size-content);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--accent-font);
 }
