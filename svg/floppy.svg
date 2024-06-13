@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-  <symbol fill="currentColor" id="floppy">
+  <symbol vewBox="0 0 21 21" fill="currentColor" id="floppy">
     <style>
       @media (prefers-color-scheme: dark) {
         path {

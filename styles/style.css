@@ -13,8 +13,14 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-.border {
+.box_size {
+  min-inline-size: var(--inline-size-content);
+  max-inline-size: var(--inline-size-content);
+}
+
+.box_colored {
   border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
 }
 
 .page {
@@ -33,15 +39,26 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--main-font-wght); 
+  font-variation-settings: 'wght' var(--main-font-wght);
 }
 
 .header {
-  background-color: var(--background-color);
-  min-inline-size: var(--inline-size-content);
-  max-inline-size: var(--inline-size-content);
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: var(--accent-font);
+}
+
+.theme-menu__button:disabled {
+  position: relative;
+  pointer-events: none;
+  }
+  
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  left: -16px;
+  color: var(--accent-color);
+  inline-size: 16px;
+  block-size: 13px;
 }
