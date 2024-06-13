@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon" href="./images/favicons/apple-touch-icon.png" />
   </head>
   <body class="page">
-    <header class="header box_size box_colored">
+    <header class="header page__box-size page__box-colored">
       <h1 class="header__title">&lt;/HTML&gt;</h1>
       <p class="header__text">закрывающий тег</p>
       <nav class="theme-menu header__theme-menu">
@@ -48,42 +48,76 @@
         </ul>
       </nav>
     </header>
-    <main class="content box_size">
-      <ul class="content__items">
-        
-        <li>
-          <article class="card__item box_colored">
-            <h2 class="card__item-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
-            <img src="./images/fritrack-desktop-img.png" alt="Картинка с домом на колесах" class="card__item-img"/>
-            <p class="card__item-text">
-              Это было самое начало пути. На этом этапе важно было проникнуться 
-              основами и настроиться на учёбу. И, возможно, подумать, как новые 
-              знания могут повлиять на ваше будущее.
-            </p>
-            <p class="card__item-text">
-              Это было самое начало пути. На этом этапе важно было проникнуться 
-              основами и настроиться на учёбу. И, возможно, подумать, как новые 
-              знания могут повлиять на ваше будущее.
-            </p>
-            <div class="card__box-buttons">
-              <button type="button" class="card__icon-button">
-                <svg class="like-icon">
-                  <use href="./svg/heart-in-paths.svg">
-                </svg>
-              </button>
-              <button type="button" class="card__like-button box_colored">
-                <span class="button__text">Like</span>
-              </button>
-            </div>
-          </article>
-        </li>
 
-      </ul>
+    <body class="page">
 
-      <button type="button" class="content__button box_colored">
-        <svg vewBox="0 0 39px 39px" class="button__icon">
-          <use href="./svg/floppy.svg#floppy">
-        </svg>
+      <main class="content page__box-size">
+        <ul class="content__items">
+          
+          <li>
+            <article class="card page__box-colored">
+              <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+              <div class="cerd__box-img">
+                <span aria-hidden="true" class="card__img-label">&lt;/HTML&gt;</span>
+                <img src="./images/fritrack-desktop-img.png" alt="Картинка с домом на колесах" class="card__img"/>
+              </div>
+              
+              <div class="card__box-body">
+                <div class="card__box-body-text">
+                  <p class="card__text">
+                    Это было самое начало пути. На этом этапе важно было проникнуться 
+                    основами и настроиться на учёбу. И, возможно, подумать, как новые 
+                    знания могут повлиять на ваше будущее.
+                  </p>
+
+                  <p class="card__text">
+                    Место для ваших воспоминаний о начале обучения.
+                  </p>
+                </div>
+
+                <div class="card__box-buttons">
+                  <button type="button" class="card__icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 47 44" class="like-icon">
+                      <g clip-path="url(#a)" filter="url(#b)">
+                        <path fill="#000" d="M16 6h-3v3h3V6Zm3 0h-3v3h3V6Zm-6 3h-3v3h3V9Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Zm9-9h-3v3h3V6Zm-6 12h-3v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
+                        <path fill="red" d="M16 9h-3v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6h-3v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"/>
+                        <path fill="#fff" d="M22 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"/>
+                        <path fill="red" d="M40 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3h-3v-3ZM28 0h3v3h-3V0Zm9 3h3v3h-3V3ZM7 3h3v3H7V3Zm9-3h3v3h-3V0ZM4 13h3v3H4v-3Z"/>
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M4 0h39v36H4z"/>
+                        </clipPath>
+                        <filter id="b" width="47" height="44" x="0" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                          <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                          <feOffset dy="4"/>
+                          <feGaussianBlur stdDeviation="2"/>
+                          <feComposite in2="hardAlpha" operator="out"/>
+                          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                          <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_4039_768"/>
+                          <feBlend in="SourceGraphic" in2="effect1_dropShadow_4039_768" result="shape"/>
+                        </filter>
+                      </defs>
+                    </svg>
+                  </button>
+
+                  <button type="button" class="card__like-button button-outline">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+
+      <button type="button" class="content__button button-outline">
+        <div class="conteiner">
+          <svg viewBox="0 0 39 39" class="button__icon">
+            <use href="./svg/floppy.svg#floppy">
+          </svg>
+        </div>
         <span class="button__text">Сохранить на память</span>
       </button>
       
@@ -91,4 +125,3 @@
     <script src="./scripts/like.js"></script>
   </body>
 </html>
-    
