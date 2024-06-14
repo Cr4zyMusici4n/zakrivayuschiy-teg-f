@@ -102,3 +102,18 @@
     opacity: 1;
   }
 }
+
+@keyframes grayscale {
+  to {
+    filter: grayscale(0);
+  }
+  from {
+    filter: grayscale(1);
+  }
+}
+
+@keyframes hue-rotate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}

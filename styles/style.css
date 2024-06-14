@@ -49,8 +49,8 @@
   min-block-size: clamp(20.4375rem, 17.4808rem + 12.6154vw, 23rem);
 }
 
-.outline {
-  outline: 2px solid var(--accent-color);
+.border {
+  border: 2px solid var(--accent-color);
   background-color: var(--background-color);
 }
 
@@ -128,6 +128,12 @@
   gap: 50px;
 }
 
+.content__items {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .card__title {
   padding: 4px 10px;
   font-size: 18px;
@@ -137,6 +143,8 @@
 
 .card__box-img {
   position: relative;
+  border-right: none;
+  border-left: none;
   inline-size: 100%;
   block-size: clamp(23.4375rem, 0rem + 100vw, 43.75rem);
 }
@@ -144,6 +152,34 @@
 .card__img {
   inline-size: 100%;
   block-size: 100%;
+}
+
+.card__img_brightness {
+  filter: brightness(150%);
+}
+
+.card__img_grayscale {
+  animation: grayscale 2s ease-in-out alternate infinite;
+}
+
+.card__img_hue-rotate {
+  animation: hue-rotate 3s linear infinite;
+}
+
+.card__img_sepia {
+  filter: sepia(50%);
+}
+
+.card__img_contrast {
+  filter: contrast(50%);
+}
+
+.card__img_blure {
+  filter: blur(2px);
+}
+
+.card__img_filter {
+  filter: brightness(1) opacity(0.5) sepia(0.2) hue-rotate(180deg);
 }
 
 .card__img-label {
@@ -155,6 +191,7 @@
   color: var(--accent-color);
   font-family: var(--accent-font);
   font-size: 14px;
+  text-transform: uppercase;
   text-shadow: 0 0 2px var(--img-label-shadow);
   mix-blend-mode: hard-light;
 }
@@ -188,7 +225,6 @@
   justify-content: flex-end;
   align-items: center;
   gap: 4px;
-  padding-block-start: 6px;
 }
 
 .card__icon-button:focus {
@@ -213,8 +249,6 @@
 
 .button {
   position: relative;
-  border: 2px solid var(--accent-color);
-  background-color: var(--background-color);
 }
 
 .button:focus {
@@ -271,14 +305,14 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  background-color: var(--background-color);
-  inline-size: clamp(21.3125rem, 20.4471rem + 3.6923vw, 22.0625rem);
-  block-size: 191px;
+  inline-size: 352px;
+  max-inline-size: calc(100% - 34px);
+  /* inline-size: clamp(21.3125rem, 20.1587rem + 4.9231vw, 357px); */
+  block-size: 194px;
 }
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .dialog[open] .dialog__body {
@@ -303,7 +337,7 @@
 .dialog__body-button {
   text-transform: uppercase;
   inline-size: 100%;
-  block-size: 32px;
+  block-size: 38px;
 }
   
 @media (width <= 375px) {
