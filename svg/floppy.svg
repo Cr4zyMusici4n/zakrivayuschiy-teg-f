@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-  <symbol fill="currentColor" id="floppy">
+  <symbol id="floppy">
     <style>
       @media (prefers-color-scheme: dark) {
         path {
@@ -9,7 +9,7 @@
       
       @media (prefers-color-scheme: light) {
         path {
-          fill: #000;
+          fill: #fff;
         }
       }
     </style>
@@ -26,6 +26,6 @@
     <path d="M30.003 36v3h-3v-3zM27 36v3h-3v-3zM24 36v3h-3v-3zM20.999 36v3h-3v-3z"/>
     <path d="M18 36v3h-3v-3zM14.999 36v3h-3v-3z"/>
     <path d="M12 36v3H9v-3zM8.996 36v3h-3v-3z"/>
-    <path d="M6 36v3H3v-3zM39 39h-3v-3h3zM39 36h-3v-3h3zM39 33h-3v-3h3zM39 30h-3v-3h3zM39 27h-3v-3h3zM39 24h-3v-3h3zM39 21h-3v-3h3zM39 18h-3v-3h3zM39 15h-3v-3h3zM39 12h-3V9h3zM39 9h-3V6h3z"/>  </symbol>
+    <path d="M6 36v3H3v-3zM39 39h-3v-3h3zM39 36h-3v-3h3zM39 33h-3v-3h3zM39 30h-3v-3h3zM39 27h-3v-3h3zM39 24h-3v-3h3zM39 21h-3v-3h3zM39 18h-3v-3h3zM39 15h-3v-3h3zM39 12h-3V9h3zM39 9h-3V6h3z"/>
   </symbol>
 </svg>

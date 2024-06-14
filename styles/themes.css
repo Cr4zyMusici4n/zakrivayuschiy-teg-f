@@ -15,6 +15,7 @@
     linear-gradient( #007f0c, #004306)
   ;
   --img-label-shadow: rgba(0, 0, 0, 0.5);
+  --button-color: var(--accent-color);
 }
 
 :root.theme-light {
@@ -28,6 +29,7 @@
     linear-gradient( #e7e7e7 0.01%, #1a1a1a)
   ;
   --img-label-shadow: rgba(255, 255, 255, 0.5);
+  --button-color: var(--background-color);
 }
 
 @media(prefers-color-scheme: light) {
@@ -42,5 +44,6 @@
       linear-gradient( #e7e7e7 0.01%, #1a1a1a)
     ;
     --img-label-shadow: rgba(255, 255, 255, 0.5);
+    --button-color: var(--background-color);
   }
 }
