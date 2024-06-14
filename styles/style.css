@@ -124,6 +124,16 @@
   color: var(--accent-color);
   inline-size: 16px;
   block-size: 13px;
+  animation: pointer-shift 0.5s ease-in-out alternate infinite;
+}
+
+@keyframes pointer-shift {
+  from {
+    left: -20px;
+  }
+  to {
+    left: -24px;
+  }
 }
 
 .content {
@@ -143,7 +153,7 @@
 .cerd__box-img {
   position: relative;
   inline-size: clamp(23.4375rem, 0.2885rem + 98.7692vw, 43.5rem);
-  block-size: clamp(23.4375rem, 0.2885rem + 98.7692vw, 43.5rem); 
+  block-size: clamp(23.4375rem, 0.2885rem + 98.7692vw, 43.5rem);
 }
 
 .card__img {
@@ -218,7 +228,7 @@
   padding: 15px 20px;
 }
 
-.conteiner {
+.button__icon {
   inline-size: 21px;
   block-size: 21px;
 }
@@ -228,7 +238,7 @@
     flex-direction: column;
     }
     
-  .conteiner {
+  .button__icon {
     inline-size: 28px;
     block-size: 28px;
   }
