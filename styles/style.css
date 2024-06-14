@@ -187,7 +187,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
+  padding-block-start: 6px;
 }
 
 .card__icon-button:focus {
@@ -195,8 +196,10 @@
 }
 
 .like-icon {
-  inline-size: 49px;
-  block-size: 38px;
+  display: block;
+  overflow: visible;
+  inline-size: 47px;
+  block-size: 36px;
 }
 
 .sparks {
