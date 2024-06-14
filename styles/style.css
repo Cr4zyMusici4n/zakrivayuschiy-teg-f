@@ -18,12 +18,7 @@
   max-inline-size: var(--inline-size-content);
 }
 
-.page__box-colored {
-  border: 2px solid var(--accent-color);
-  background-color: var(--background-color);
-}
-
-.button-outline {
+.outline {
   outline: 2px solid var(--accent-color);
   background-color: var(--background-color);
 }
@@ -56,7 +51,7 @@
   padding: 25px;
   font-family: var(--accent-font);
   text-transform: uppercase;
-  min-block-size: 364px;
+  min-block-size: clamp(20.4375rem, 17.4808rem + 12.6154vw, 23rem);
 }
 
 .header__title {
@@ -70,7 +65,7 @@
   text-transform: uppercase;
 }
 
-.theme-menu__list{
+.theme-menu__list {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -85,12 +80,41 @@
   font-size: 14px;
   line-height: 1em;
   text-transform: uppercase;
+}
 
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid var(--accent-color);
+  opacity: 0.6;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:hover {
+  animation: change-opacity 0.3s ease forwards;
+}
+
+@keyframes change-opacity {
+  to {
+    opacity: 0.6;
+  }
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  animation: change-opacity 0.3s ease forwards;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform-origin: 0;
+  transform: scaleX(1);
 }
 
 .theme-menu__button:disabled {
   position: relative;
   pointer-events: none;
+  opacity: 0.6;
 }
   
 .theme-menu__button:disabled::before {
@@ -110,7 +134,7 @@
 }
 
 .card__title {
-  padding: 3px 10px;
+  padding: 4px 10px;
   font-size: 18px;
   line-height: 21.78px;
   font-variation-settings: 'wght' var(--main-font-title-wght);
@@ -118,10 +142,13 @@
 
 .cerd__box-img {
   position: relative;
+  inline-size: clamp(23.4375rem, 0.2885rem + 98.7692vw, 43.5rem);
+  block-size: clamp(23.4375rem, 0.2885rem + 98.7692vw, 43.5rem); 
 }
 
 .card__img {
   inline-size: 100%;
+  block-size: 100%;
 }
 
 .card__img-label {
@@ -194,15 +221,15 @@
 .conteiner {
   inline-size: 21px;
   block-size: 21px;
-  }
+}
   
-  @media (width <= 375px) {
-    .content__button {
-      flex-direction: column;
-      }
-      
-    .conteiner {
-      inline-size: 28px;
-      block-size: 28px;
+@media (width <= 375px) {
+  .content__button {
+    flex-direction: column;
     }
+    
+  .conteiner {
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }
