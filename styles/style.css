@@ -242,15 +242,15 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 1px solid var(--accent-color);
+  outline: 2px solid var(--accent-color);
   transition: outline 0.3s ease;
 }
 
 .like-icon {
   display: block;
   overflow: visible;
-  inline-size: 47px;
-  block-size: 38px;
+  inline-size: 39px;
+  block-size: 35px;
 }
 
 .sparks {
