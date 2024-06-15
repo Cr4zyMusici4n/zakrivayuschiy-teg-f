@@ -42,9 +42,8 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  gap: 20px;
   padding: 25px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif, fantasy;
   text-transform: uppercase;
   min-block-size: clamp(20.4375rem, 17.4808rem + 12.6154vw, 23rem);
 }
@@ -54,15 +53,16 @@
   background-color: var(--background-color);
 }
 
-.header__title {
+.header__logo {
+  margin-block-end: 20px;
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   line-height: 1em;
 }
 
-.header__text {
+.header__title {
+  margin-block-end: 25px;
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   line-height: 1em;
-  text-transform: uppercase;
 }
 
 .theme-menu__list {
@@ -80,6 +80,7 @@
   font-size: 14px;
   line-height: 1em;
   text-transform: uppercase;
+  max-block-size: 14px;
 }
 
 .theme-menu__button::after {
@@ -92,12 +93,13 @@
 }
 
 .theme-menu__button:hover {
-  animation: change-opacity 0.3s ease forwards;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {
   outline: none;
-  animation: change-opacity 0.3s ease forwards;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -114,6 +116,7 @@
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
+  top: 0;
   left: -20px;
   color: var(--accent-color);
   animation: pointer-shift 0.5s ease-in-out alternate infinite;
@@ -146,10 +149,11 @@
   border-right: none;
   border-left: none;
   inline-size: 100%;
-  block-size: clamp(23.4375rem, 0rem + 100vw, 43.75rem);
 }
 
 .card__img {
+  object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -189,7 +193,7 @@
   z-index: 1;
   opacity: 0.5;
   color: var(--accent-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif, fantasy;
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: 0 0 2px var(--img-label-shadow);
@@ -224,18 +228,29 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 4px;
+  gap: 12px;
+}
+
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__icon-button:focus {
   outline: none;
 }
 
+.card__icon-button:focus-visible {
+  outline: 1px solid var(--accent-color);
+  transition: outline 0.3s ease;
+}
+
 .like-icon {
   display: block;
   overflow: visible;
   inline-size: 47px;
-  block-size: 36px;
+  block-size: 38px;
 }
 
 .sparks {
@@ -249,12 +264,12 @@
 
 .button {
   position: relative;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
   box-shadow: 2px 2px 0px var(--accent-color);
   outline: none;
-  transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -262,11 +277,12 @@
   position: absolute;
   inset: 0;
   background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
+  transform-origin: 0;
 }
 
 .button:hover::after {
-  transition: transform 0.5s ease-in-out;
   transform: scaleX(1);
   transform-origin: 0;
 }
@@ -276,7 +292,7 @@
   z-index: 1;
   display: block;
   color: var(--button-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif, fantasy;
   font-size: 14px;
   line-height: 90%;
   mix-blend-mode: difference;
@@ -301,14 +317,13 @@
 .dialog {
   padding: 30px;
   color: var(--accent-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif, fantasy;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   inline-size: 352px;
   max-inline-size: calc(100% - 34px);
-  /* inline-size: clamp(21.3125rem, 20.1587rem + 4.9231vw, 357px); */
-  block-size: 194px;
+  min-block-size: 191px;
 }
 
 .dialog::backdrop {
@@ -334,6 +349,10 @@
   block-size: 39px;
 }
 
+.dialog__body-text {
+  line-height: 150%;
+}
+
 .dialog__body-button {
   text-transform: uppercase;
   inline-size: 100%;
@@ -341,6 +360,14 @@
 }
   
 @media (width <= 375px) {
+  .page__box-size {
+    inline-size: 100vw;
+  }
+
+  .header {
+    padding: 14px;
+  }
+
   .content__button {
     flex-direction: column;
   }
