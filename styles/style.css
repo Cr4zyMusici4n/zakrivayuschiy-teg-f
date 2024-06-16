@@ -41,6 +41,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  margin-block-end: 100px;
   padding: 25px;
   font-family: var(--accent-font), sans-serif, fantasy;
   text-transform: uppercase;
@@ -50,10 +51,6 @@
 .border {
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
-}
-
-.header {
-  margin-block-end: 100px;
 }
 
 .header__logo {
@@ -83,8 +80,8 @@
   font-size: 14px;
   line-height: 1em;
   text-transform: uppercase;
-  max-block-size: 14px;
   transition: opacity 0.3s ease;
+  max-block-size: 14px;
 }
 
 .theme-menu__button::after {
