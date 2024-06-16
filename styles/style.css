@@ -22,8 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
-  padding: 100px 0;
+  padding: 100px 0 103px;
   color: var(--accent-color);
   font-family: var(--main-font), sans-serif;
   background-color: var(--background-color);
@@ -51,6 +50,10 @@
 .border {
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
+}
+
+.header {
+  margin-block-end: 100px;
 }
 
 .header__logo {
@@ -81,6 +84,7 @@
   line-height: 1em;
   text-transform: uppercase;
   max-block-size: 14px;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -94,12 +98,14 @@
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {
   outline: none;
-  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -149,6 +155,7 @@
   border-right: none;
   border-left: none;
   inline-size: 100%;
+  aspect-ratio: 1/1;
 }
 
 .card__img {
@@ -228,13 +235,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  gap: 7px;
 }
 
 .card__icon-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -243,7 +251,6 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
-  transition: outline 0.3s ease;
 }
 
 .like-icon {
@@ -267,7 +274,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.button:focus {
+.button:focus-visible {
   box-shadow: 2px 2px 0px var(--accent-color);
   outline: none;
 }
@@ -323,7 +330,6 @@
   text-transform: uppercase;
   inline-size: 352px;
   max-inline-size: calc(100% - 34px);
-  min-block-size: 191px;
 }
 
 .dialog::backdrop {
@@ -360,12 +366,16 @@
 }
   
 @media (width <= 375px) {
+  .page {
+    padding: 102px 0 100px;
+  }
+
   .page__box-size {
     inline-size: 100vw;
   }
 
   .header {
-    padding: 14px;
+    padding: 25px 14px;
   }
 
   .content__button {
